@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "author": "",
+  "scripts": {
+    "build": "umi build",
+    "dev": "umi dev",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@designable/core": "1.0.0-beta.45",
+    "@designable/formily-setters": "1.0.0-beta.45",
+    "@designable/formily-transformer": "1.0.0-beta.45",
+    "@designable/react": "1.0.0-beta.45",
+    "@designable/react-settings-form": "1.0.0-beta.45",
+    "@designable/shared": "1.0.0-beta.45",
+    "@formily/antd": "^2.2.6",
+    "@formily/core": "^2.2.6",
+    "@formily/react": "^2.2.6",
+    "@formily/reactive": "^2.2.6",
+    "@formily/reactive-react": "^2.2.6",
+    "@formily/shared": "^2.2.6",
+    "antd": "^4.23.4",
+    "classnames": "^2.3.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "umi": "^4.0.24"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13",
+    "@types/jest": "^27",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "jest": "^27",
+    "prettier": "^2",
+    "prettier-plugin-organize-imports": "^2",
+    "prettier-plugin-packagejson": "^2",
+    "ts-node": "^10",
+    "typescript": "^4"
+  }
+}
