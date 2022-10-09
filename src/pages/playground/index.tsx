@@ -63,6 +63,7 @@ import {
   FormTab,
   FormCollapse,
   FormLayout,
+  Div,
   FormGrid,
 } from './source';
 
@@ -149,6 +150,7 @@ const Playground = () => {
                 FormLayout,
                 FormCollapse,
                 Space,
+                Div,
               ]}
             />
             <ResourceWidget
@@ -169,7 +171,8 @@ const Playground = () => {
             <ToolbarPanel>
               <DesignerToolsWidget />
               <ViewToolsWidget
-                use={['DESIGNABLE', 'JSONTREE', 'MARKUP', 'PREVIEW']}
+                // use={['DESIGNABLE', 'JSONTREE', 'MARKUP', 'PREVIEW']}
+                use={['DESIGNABLE', 'JSONTREE', 'PREVIEW']}
               />
             </ToolbarPanel>
             <ViewportPanel style={{ height: '100%' }}>
@@ -203,6 +206,7 @@ const Playground = () => {
                       FormCollapse,
                       FormGrid,
                       FormLayout,
+                      Div,
                       ObjectContainer,
                     }}
                   />

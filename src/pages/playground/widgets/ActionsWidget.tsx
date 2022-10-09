@@ -1,28 +1,25 @@
-import React, { useEffect } from 'react'
-import { Space, Button, Radio } from 'antd'
-import { GithubOutlined } from '@ant-design/icons'
-import { useDesigner, TextWidget } from '@designable/react'
-import { GlobalRegistry } from '@designable/core'
-import { observer } from '@formily/react'
-import { loadInitialSchema, saveSchema } from '../service'
+import React, { useEffect } from 'react';
+import { Space, Button, Radio } from 'antd';
+import { GithubOutlined } from '@ant-design/icons';
+import { useDesigner, TextWidget } from '@designable/react';
+import { GlobalRegistry } from '@designable/core';
+import { observer } from '@formily/react';
+import { loadInitialSchema, saveSchema } from '../service';
 
 export const ActionsWidget = observer(() => {
-  const designer = useDesigner()
+  const designer = useDesigner();
   useEffect(() => {
-    loadInitialSchema(designer)
-  }, [])
-  const supportLocales = ['zh-cn', 'en-us', 'ko-kr']
+    loadInitialSchema(designer);
+  }, []);
+  const supportLocales = ['zh-cn', 'en-us', 'ko-kr'];
   useEffect(() => {
     if (!supportLocales.includes(GlobalRegistry.getDesignerLanguage())) {
-      GlobalRegistry.setDesignerLanguage('zh-cn')
+      GlobalRegistry.setDesignerLanguage('zh-cn');
     }
-  }, [])
+  }, []);
   return (
     <Space style={{ marginRight: 10 }}>
-      <Button href="https://designable-fusion.formilyjs.org">
-        Alibaba Fusion
-      </Button>
-      <Radio.Group
+      {/* <Radio.Group
         value={GlobalRegistry.getDesignerLanguage()}
         optionType="button"
         options={[
@@ -33,14 +30,10 @@ export const ActionsWidget = observer(() => {
         onChange={(e) => {
           GlobalRegistry.setDesignerLanguage(e.target.value)
         }}
-      />
-      <Button href="https://github.com/alibaba/designable" target="_blank">
-        <GithubOutlined />
-        Github
-      </Button>
+      /> */}
       <Button
         onClick={() => {
-          saveSchema(designer)
+          saveSchema(designer);
         }}
       >
         <TextWidget>Save</TextWidget>
@@ -48,11 +41,11 @@ export const ActionsWidget = observer(() => {
       <Button
         type="primary"
         onClick={() => {
-          saveSchema(designer)
+          saveSchema(designer);
         }}
       >
         <TextWidget>Publish</TextWidget>
       </Button>
     </Space>
-  )
-})
+  );
+});
