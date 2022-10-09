@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { createForm } from '@formily/core';
 import { createSchemaField } from '@formily/react';
+import { Row, Col } from 'antd';
 import {
   Form,
   FormItem,
@@ -52,6 +53,8 @@ const SchemaField = createSchemaField({
     FormGrid,
     FormLayout,
     Div,
+    Row,
+    Col,
     FormTab,
     FormCollapse,
     ArrayTable,

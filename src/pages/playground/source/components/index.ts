@@ -27,3 +27,4 @@ export * from './FormGrid';
 export * from './FormLayout';
 export * from './Div';
 export * from './Row';
+export * from './Col';

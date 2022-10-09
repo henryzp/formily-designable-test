@@ -66,6 +66,7 @@ import {
   Div,
   FormGrid,
   Row,
+  Col,
 } from './source';
 
 setNpmCDNRegistry('//unpkg.com');
@@ -153,6 +154,7 @@ const Playground = () => {
                 Space,
                 Div,
                 Row,
+                Col,
               ]}
             />
             <ResourceWidget
@@ -210,6 +212,7 @@ const Playground = () => {
                       FormLayout,
                       Div,
                       Row,
+                      Col,
                       ObjectContainer,
                     }}
                   />
