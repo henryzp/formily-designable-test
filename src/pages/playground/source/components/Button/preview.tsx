@@ -6,8 +6,18 @@ import { createVoidFieldSchema } from '../Field';
 import { renderDataSource } from '../../shared';
 import IconSetter from '../../common/IconSetter';
 
-export const Button: DnFC<React.ComponentProps<typeof FormilyButton>> =
-  FormilyButton;
+export const Button: DnFC<React.ComponentProps<typeof FormilyButton>> = (
+  props: any,
+) => {
+  let newProps: any = {};
+  for (let key in props) {
+    // 要过滤掉icon属性，因为用的是非标准写法
+    if (key !== 'icon') {
+      newProps[key] = props[key];
+    }
+  }
+  return <FormilyButton {...newProps} />;
+};
 
 Button.Behavior = createBehavior({
   name: 'Button',
