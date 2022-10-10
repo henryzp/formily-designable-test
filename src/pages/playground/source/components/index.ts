@@ -28,3 +28,4 @@ export * from './FormLayout';
 export * from './Div';
 export * from './Row';
 export * from './Col';
+export * from './Button';

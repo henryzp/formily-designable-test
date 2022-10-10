@@ -67,6 +67,7 @@ import {
   FormGrid,
   Row,
   Col,
+  Button,
 } from './source';
 
 setNpmCDNRegistry('//unpkg.com');
@@ -161,7 +162,7 @@ const Playground = () => {
               title="sources.Arrays"
               sources={[ArrayCards, ArrayTable]}
             />
-            <ResourceWidget title="sources.Displays" sources={[Text]} />
+            <ResourceWidget title="sources.Displays" sources={[Text, Button]} />
           </CompositePanel.Item>
           <CompositePanel.Item title="panels.OutlinedTree" icon="Outline">
             <OutlineTreeWidget />
@@ -214,6 +215,7 @@ const Playground = () => {
                       Row,
                       Col,
                       ObjectContainer,
+                      Button,
                     }}
                   />
                 )}
