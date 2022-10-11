@@ -33,6 +33,8 @@ import {
 import { Card, Slider, Rate } from 'antd';
 import { TreeNode } from '@designable/core';
 import { transformToSchema } from '@designable/formily-transformer';
+import { Schema } from '@formily/react';
+import { PlusOutlined } from '@ant-design/icons';
 
 const Text: React.FC<{
   value?: string;
@@ -46,6 +48,26 @@ const Text: React.FC<{
 const Div = (props: any) => {
   return <div {...props} />;
 };
+
+Schema.registerPatches((schema) => {
+  const componentProps = schema['x-component-props'];
+  if (componentProps) {
+    for (let key in componentProps) {
+      const value = componentProps[key];
+      if (value.type === 'ICON') {
+        // schema['x-component-props'][key] = getIcons(value.name);
+      }
+    }
+  }
+  // 尝试处理x-data属性
+  // const customData = schema['x-data'];
+  // if (customData) {
+  //   for (let key in customData) {
+  //     schema['x-component-props'][key] = customData[key];
+  //   }
+  // }
+  return schema;
+});
 
 const SchemaField = createSchemaField({
   components: {

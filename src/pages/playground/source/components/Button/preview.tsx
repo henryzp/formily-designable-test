@@ -59,11 +59,11 @@ Button.Behavior = createBehavior({
             title: '类型',
             default: 'default',
           },
-          icon: {
-            title: 'ICON',
-            'x-component': IconSetter,
-            'x-decorator': 'FormItem',
-          },
+          // icon: {
+          //   title: 'ICON',
+          //   'x-component': IconSetter,
+          //   'x-decorator': 'FormItem',
+          // },
         },
       },
       false,
